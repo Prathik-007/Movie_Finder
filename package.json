@@ -9,12 +9,13 @@
     "lint": "eslint .",
     "preview": "vite preview"
   },
-  
   "dependencies": {
     "@tailwindcss/vite": "^4.1.8",
     "appwrite": "^18.1.1",
+    "axios": "^1.10.0",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
+    "react-router-dom": "^7.6.3",
     "react-use": "^17.6.0",
     "tailwindcss": "^4.1.8"
   },

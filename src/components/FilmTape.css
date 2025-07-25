@@ -1,0 +1,72 @@
+.film-tape-container {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 50px;
+  padding: 50px 0;
+  overflow: hidden;
+  /*background: linear-gradient(to top, #8E0E00, #1F1C18);*/
+  background-image:url('hero-bg.png');
+}
+
+.film-tape {
+  display: flex;
+  gap: 30px;
+  width: max-content;
+  padding-left: 100%;
+  animation: scroll-left 40s linear infinite;
+}
+
+.film-tape.reverse {
+  animation: scroll-right 40s linear infinite;
+}
+
+.film-tape img {
+  height: 180px; /* 🔼 Increased size */
+  width: auto;
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.6);
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.film-tape img:hover {
+  transform: scale(1.05); /* subtle zoom effect on hover */
+}
+
+/* Individual strip speed customization */
+.tape-top {
+  animation-duration: 35s;
+}
+
+.tape-middle {
+  animation-duration: 45s;
+}
+
+.tape-bottom {
+  animation-duration: 55s;
+}
+
+/* Scroll animations */
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes scroll-right {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
